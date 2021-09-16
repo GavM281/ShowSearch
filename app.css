@@ -4,12 +4,11 @@
     margin-bottom: 10px;
 }
 
-#showPic{
-    max-width:100%;
-    min-width: 30%;
+img{
+    max-width: 100%;
     border-radius: 5px;
-    margin-bottom: 5px;
 }
+
 button {
     margin: 0px 10px;
 }
@@ -19,7 +18,7 @@ body{
 }
 
 #container{
-    padding: 10px;
+    padding: 15px;
 }
 
 .card{
@@ -28,34 +27,13 @@ body{
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 }
 
-.card-body{
-    height: 100%;
-}
-
 .icon {
     color: #ffde00;
     font-size: 30px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #review{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-}
-
-/* Keep text on the same line */
-#together{
-    white-space: nowrap;
-}
-
-#together img{
-    /*width: 1em;*/
-    margin-top: -10px;
-    width: 25px;
-    max-width: 30px;
-}
-
-h3 span {
-    font-size: 15px;
-    color: #2d2d2d
 }

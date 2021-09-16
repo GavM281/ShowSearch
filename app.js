@@ -14,7 +14,6 @@ form.addEventListener('submit', async function (e){
 const getEpisodes = async(id) => {
     try {
         const res = await axios.get('https://api.tvmaze.com/shows/' + id + '/episodes');
-        // const res = await axios.get('https://api.tvmaze.com/seasons/1/episodes');
 
         console.log("Going to print from inside getEpisodes");
         console.log(res.data);
@@ -82,12 +81,12 @@ async function showResults(shows){
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xl-5">
-                                <img src="${image}" style="max-width: 100%">
+                                <img src="${image}">
                             </div>
                             
                             <div class="col-lg-12 col-xl-7">
                                 <h3>${result.show.name}</h3>
-                                <p><i class="fas fa-star icon"></i> ${rating}</p>
+                                <p id="review"><i class="fas fa-star icon"></i> ${rating}</p>
                                 <p>${seasons} Seasons · ${numEpisodes} episodes</p>
             
             
