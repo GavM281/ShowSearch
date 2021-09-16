@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Search</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- AXIOS  !-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/63302ef58e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- SEARCH -->
+    <div id="searchBar">
+        <div>
+            <h2 class="text-center">Search for a tv show</h2>
+        </div>
+        <form id="searchForm" class="d-flex justify-content-center flex-wrap" method="post">
+            <div class="mb-3"><input class="form-control" type="search" placeholder="Enter show"></div>
+            <div class="mb-3"><button class="btn btn-primary" type="submit">Search</button></div>
+        </form>
+    </div>
+
+
+    <!-- SHOW RESULTS -->
+    <div id="container">
+        <div class="row" id="results">
+
+
+        </div>
+    </div>
+
+    <!-- App Javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
