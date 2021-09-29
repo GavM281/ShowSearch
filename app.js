@@ -6,7 +6,7 @@ form.addEventListener('submit', async function (e){
     const res = await axios.get('https://api.tvmaze.com/search/shows', config);
 
     console.log(res.data)
-    showResults(res.data)
+    await showResults(res.data)
 
     form[0].value = ""; // Empty search bar
 })
@@ -81,7 +81,7 @@ async function showResults(shows){
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xl-5">
-                                <img src="${image}">
+                                <img src="${image}" alt="show poster">
                             </div>
                             
                             <div class="col-lg-12 col-xl-7">
@@ -90,10 +90,10 @@ async function showResults(shows){
                                 <p>${seasons} Seasons · ${numEpisodes} episodes</p>
             
             
-                                <p>${summary}</p>
+                                <p id="plot" style="font-size:2px;">${summary}</p>
                             </div>
                             
-                            <a href='https://www.imdb.com/title/${IMDbId}'><button class="btn btn-primary"> See on IMDb.com</button></a>
+                            <a href='https://www.imdb.com/title/${IMDbId}'><button class="btn btn-primary" id="imdbLink"> See on IMDb.com</button></a>
                         </div>
                     </div>
                 </div>
