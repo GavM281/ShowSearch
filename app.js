@@ -8,7 +8,7 @@ form.addEventListener('submit', async function (e){
     console.log(res.data)
     await showResults(res.data)
 
-    form[0].value = ""; // Empty search bar
+    // form[0].value = ""; // Empty search bar
 })
 
 const getEpisodes = async(id) => {
@@ -36,9 +36,6 @@ async function showResults(shows){
     for(let result of shows) { // Loop through shows
         console.log()
         console.log(result.show.name)
-
-
-
         console.log("id is " + result.show.id)
         // let episodes = getEpisodes(result.show.id); // Get number of episodes
 
@@ -63,8 +60,8 @@ async function showResults(shows){
 
 
             let summary = result.show.summary;
-            if(summary.length > 300){ // Limit length of summary if it's too long
-                summary = summary.substring(0,300) + '.....'
+            if(summary.length > 295){ // Limit length of summary if it's too long
+                summary = summary.substring(0,295) + '.....'
             }
 
             let rating = result.show.rating.average;
@@ -76,12 +73,15 @@ async function showResults(shows){
 
             // Create a card for a result
             card += `
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4" style="display: inline-flex; justify-content: space-evenly;">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xl-5">
                                 <img src="${image}" alt="show poster">
+                                <a href='https://www.imdb.com/title/${IMDbId}'>
+                                    <button class="btn btn-primary" id="imdbLink">See on IMDb.com</button>
+                                </a>
                             </div>
                             
                             <div class="col-lg-12 col-xl-7">
@@ -93,7 +93,6 @@ async function showResults(shows){
                                 <p id="plot" style="font-size:2px;">${summary}</p>
                             </div>
                             
-                            <a href='https://www.imdb.com/title/${IMDbId}'><button class="btn btn-primary" id="imdbLink"> See on IMDb.com</button></a>
                         </div>
                     </div>
                 </div>
