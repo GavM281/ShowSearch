@@ -1,6 +1,6 @@
 # ShowSearch
 Find a tv shows plot, ratings and the number of seasons and episodes. There's also a link to the shows IMDb page to get more information. 
-![image](https://user-images.githubusercontent.com/25159545/135350894-bdecf6e8-a53a-4a21-a49c-947fd543c431.png)
+![image](https://github.com/GavM281/ShowSearch/assets/25159545/9c9261b2-6db0-4315-a36c-91cec3dc3953)
 
 
 ## Technologies used
